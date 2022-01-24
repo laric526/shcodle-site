@@ -23,7 +23,6 @@
 }
 
 .post {
-  width: 400px;
 }
 
 #post-area {
@@ -31,7 +30,7 @@
 }
 
 #quick-links {
-  width: 120px;
+  width: 25%;
   float: right;
 }
 
