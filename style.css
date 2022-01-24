@@ -23,9 +23,11 @@
 }
 
 .post {
+  width: 100%;
 }
 
 #post-area {
+  width: 70%;
   float: left;
 }
 
