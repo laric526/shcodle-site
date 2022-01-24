@@ -1,7 +1,11 @@
 html {
-  background-color: #164439
+  background-color: #164439;
 }
 
 h1, p {
-  color: white
+  color: white;
+}
+
+h1 {
+  text-align: center;
 }
