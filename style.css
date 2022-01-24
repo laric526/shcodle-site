@@ -1,0 +1,41 @@
+.center {
+  width: 100%;
+  text-align: center;
+  float: right;
+}
+
+.margin {
+  margin: 5px;
+}
+
+.inset {
+  border-color: gray;
+  border-style: inset;
+}
+
+.outset {
+  border-color: gray;
+  border-style: outset;
+}
+
+.invis-link {
+  text-decoration: none;
+}
+
+.post {
+  width: 400px;
+}
+
+#post-area {
+  float: left;
+}
+
+#quick-links {
+  width: 120px;
+  float: right;
+}
+
+* {
+  color: white;
+  background-color: #164439;
+}
