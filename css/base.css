@@ -10,12 +10,11 @@
 }
 
 #post-area {
-  width: 64%;
   float: left;
 }
 
 #quick-links {
-  width: 30%;
+  width: 120px;
   float: right;
 }
 
