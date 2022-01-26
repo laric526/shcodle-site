@@ -2,6 +2,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const post = urlParams.get("post");
 fetchAsync('https://script.google.com/macros/s/AKfycbxrG9dP1KdDUrY3Q3_a4CxRCZ9Cc8TkFONwRkAmbSKexWPU0fONUC6haYjUlY6DlRzw7Q/exec?action=getrecentposts').then(data => {
+	document.getElementById('posts').removeChild(document.getElementById('loading-text'));
   data.result.forEach((element, index) => {
   	var clone = document.getElementById('post-template').content.cloneNode(true);
     var post = clone.querySelector('.post');
