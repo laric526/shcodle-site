@@ -22,11 +22,11 @@
   text-decoration: none;
 }
 
-.post {
+.post-content {
   width: 100%;
 }
 
-#post-area {
+#posts {
   width: 70%;
   float: left;
 }
