@@ -19,7 +19,7 @@ function createPost(data, root) {
   if (root) {
   	document.getElementById('post').appendChild(post);
   } else {
-  	document.getElementById('post-' + data.result.parent).querySelector('.post-content').appendChild(post);
+  	document.getElementById('post-' + data.result.parent).querySelector('.post-frame').appendChild(post);
   }
   
   data.result.comments.forEach((element, index) => {
