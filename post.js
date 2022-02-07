@@ -3,7 +3,7 @@ const serverUrl = 'https://script.google.com/macros/s/AKfycbwD3byf7TWfnOuyZ3krKD
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const post = urlParams.get("post");
-fetchAsync(serverUrl + '?action=getpost&post=0').then(data => {
+fetchAsync(serverUrl + '?action=getpost&post=' + post).then(data => {
 	document.getElementById('post').removeChild(document.getElementById('loading-text'));
   createPost(data, true);
 });
