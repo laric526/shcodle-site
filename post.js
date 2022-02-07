@@ -14,7 +14,7 @@ function createPost(data, root) {
   post.href = 'createpost.html?parent=' + data.result.id;
   post.querySelector('.post-title').innerHTML = data.result.title;
   post.querySelector('.post-metadata').innerHTML = 'id: ' + data.result.id + ' | time: ' + data.result.time + ' (' + timeConverter(data.result.time) + ')';
-  post.querySelector('.post-content')
+  post.querySelector('.post-content').innerHTML = data.result.content;
   post.id = 'post-' + data.result.id;
   if (root) {
   	document.getElementById('post').appendChild(post);
