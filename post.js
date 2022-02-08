@@ -11,7 +11,7 @@ fetchAsync(serverUrl + '?action=getpost&post=' + post).then(data => {
 function createPost(data, root) {
   var clone = document.getElementById('post-template').content.cloneNode(true);
   var post = clone.querySelector('.post');
-  post.href = 'createpost.html?parent=' + data.result.id;
+  post.href = 'post.html?post=' + data.result.id;
   post.querySelector('.post-title').innerHTML = data.result.title;
   post.querySelector('.post-metadata').innerHTML = 'id: ' + data.result.id + ' | time: ' + data.result.time + ' (' + timeConverter(data.result.time) + ')';
   post.querySelector('.post-content').innerHTML = data.result.content;
