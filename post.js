@@ -4,8 +4,8 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const post = urlParams.get("post");
 fetchAsync(serverUrl + '?action=getpost&post=' + post).then(data => {
-	document.getElementById('post').removeChild(document.getElementById('loading-text'));
   createPost(data, true);
+	document.getElementById('post').removeChild(document.getElementById('loading-text'));
 });
 
 function createPost(data, root) {
@@ -16,17 +16,18 @@ function createPost(data, root) {
   post.querySelector('.post-metadata').innerHTML = 'id: ' + data.result.id + ' | time: ' + data.result.time + ' (' + timeConverter(data.result.time) + ')';
   post.querySelector('.post-content').innerHTML = data.result.content;
   post.id = 'post-' + data.result.id;
-  if (root) {
-  	document.getElementById('post').appendChild(post);
-  } else {
-  	document.getElementById('post-' + data.result.parent).querySelector('.post-frame').appendChild(post);
-  }
   
   data.result.comments.forEach((element, index) => {
     fetchAsync(serverUrl + '?action=getpost&post=' + element).then(data => {
 			createPost(data, false);
     });
   });
+	
+  if (root) {
+  	document.getElementById('post').appendChild(post);
+  } else {
+  	document.getElementById('post-' + data.result.parent).querySelector('.post-frame').appendChild(post);
+  }
 }
 
 async function fetchAsync (url) {
